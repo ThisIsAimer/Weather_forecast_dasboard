@@ -1,5 +1,6 @@
 import streamlit as web
 import plotly.express as plotly
+import backend
 
 web.title("Weather Forecast Dashboard")
 place = web.text_input("place:",placeholder="Ex: Japan")
@@ -10,6 +11,9 @@ web.header(f"{selection} for the next {days} days in {place}:")
 
 dates = ["oct 1st","oct 5th", "oct 10th", "oct 15th", "oct 20"]
 temperature = [20,19,22,19,16]
+
+
+data = backend.get_data(place,days,selection)
 
 
 
