@@ -16,11 +16,6 @@ def get_data(place,days=None,selection=None):
     filtered_data = filtered_data[:no_of_values]
     #8 values for 24 hours
 
-    if selection == "Temperature":
-        filtered_data = [dicts["main"]["temp"] for dicts in filtered_data]
-
-    if selection == "Weather":
-        filtered_data = [dicts["weather"][0]["main"] for dicts in filtered_data]
     return filtered_data
 
 if __name__ == "__main__":
